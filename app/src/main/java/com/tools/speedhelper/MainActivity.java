@@ -163,7 +163,7 @@ public class MainActivity extends AppBaseActivity {
                 if(downloadInfo.state==3){//下载完成，打开文件
                     long curTime = System.currentTimeMillis();
                     int usedTime = (int) ((curTime-startTime)/1000);
-                    L.d("文件大小为："+downloadInfo.size/1024+"下载完成...耗费..."+usedTime+"s");
+                    L.d("文件大小为："+ConverUtil.roundByScale(downloadInfo.size/1024/1024,2)+"M,下载完成...耗费..."+usedTime+"s");
                     playVideo(videoPath);
                 }
             }
